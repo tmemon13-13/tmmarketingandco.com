@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="PcsCXOzucBrSftLMXQL7BckDDU9wuhEGcq1u8qhWXMM" />
 <title>Work | TM Marketing &amp; Co LLC</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Manrope:wght@200;300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -182,7 +183,7 @@ footer{padding:28px 48px;border-top:1px solid rgba(255,255,255,0.06);display:fle
 <div class="page-hero">
   <div class="pg-eyebrow">Our Work</div>
   <h1 class="pg-title">Featured <em>client work.</em></h1>
-  <p class="pg-sub">Real results for real businesses. Here's a look at what we've built together.</p>
+  <p class="pg-sub">Real results for real businesses. Here's a look at what we've built together — two projects, two industries, one standard of excellence.</p>
 </div>
 <div class="work-sec">
   <div class="case-study reveal">
@@ -209,13 +210,78 @@ footer{padding:28px 48px;border-top:1px solid rgba(255,255,255,0.06);display:fle
     </div>
   </div>
 </div>
+<!-- D.O. CLARK CASE STUDY -->
+<div class="work-sec" style="padding-top:0;border-top:none">
+  <div class="case-study reveal">
+    <div class="cs-hero">
+      <img src="images/doclark.jpg" alt="D.O Clark &amp; Associates">
+      <div class="cs-overlay">
+        <div>
+          <div class="cs-launched">&#10003; Live &amp; Launched</div>
+          <h3 class="cs-name">D.O Clark &amp;<br>Associates</h3>
+          <p class="cs-meta">Washington, DC &bull; International Economic Development</p>
+        </div>
+        <a href="https://doclark.net" target="_blank" class="cs-btn">Visit Site &nearr;</a>
+      </div>
+    </div>
+    <div>
+      <div class="cs-tabs">
+        <button class="cs-tab active" data-tab="dc-overview">Overview</button>
+        <button class="cs-tab" data-tab="dc-challenge">Challenge</button>
+        <button class="cs-tab" data-tab="dc-solution">Solution</button>
+        <button class="cs-tab" data-tab="dc-results">Results</button>
+      </div>
+      <div class="cs-panels">
+        <div class="cs-panel active" id="tab-dc-overview">
+          <p>D.O Clark &amp; Associates is a bespoke international economic development and advisory firm specializing in cross-border trade, investment facilitation, and agribusiness. TM Marketing &amp; Co built their digital presence from the ground up — a sophisticated, globally-positioned website to match their world-class advisory work.</p>
+          <div class="cs-chips">
+            <span class="cs-chip cs-chip-a">Website Design &amp; Dev</span>
+            <span class="cs-chip">Brand Identity</span>
+            <span class="cs-chip">Content Strategy</span>
+            <span class="cs-chip cs-chip-a">SEO</span>
+            <span class="cs-chip">Copywriting</span>
+            <span class="cs-chip">UX/UI Design</span>
+          </div>
+        </div>
+        <div class="cs-panel" id="tab-dc-challenge">
+          <p>D.O Clark &amp; Associates needed a digital presence that reflected the prestige and complexity of their international advisory work — without a single existing web asset to start from.</p>
+          <ul class="cs-list">
+            <li>No existing website or digital footprint</li>
+            <li>Needed to convey trust and expertise to high-level international partners</li>
+            <li>Complex multi-service offering requiring clear, compelling structure</li>
+            <li>Brand voice needed to balance gravitas with accessibility</li>
+          </ul>
+        </div>
+        <div class="cs-panel" id="tab-dc-solution">
+          <p>We built a full multi-page website with a premium, editorial aesthetic — dark, refined, and globally authoritative. Every page was crafted to position D.O Clark &amp; Associates as a world-class advisory firm.</p>
+          <ul class="cs-list">
+            <li>Custom multi-page site with cinematic hero and animations</li>
+            <li>Strategic content architecture across 5 pages</li>
+            <li>Full brand identity including color system and typography</li>
+            <li>SEO-optimized structure and metadata throughout</li>
+          </ul>
+        </div>
+        <div class="cs-panel" id="tab-dc-results">
+          <p>D.O Clark &amp; Associates launched with a polished, professional online presence that immediately signals credibility to international partners, investors, and institutions.</p>
+          <div class="cs-results">
+            <div class="cs-res"><div class="cs-res-n">5</div><div class="cs-res-l">Custom pages built</div></div>
+            <div class="cs-res"><div class="cs-res-n">&#10003;</div><div class="cs-res-l">Full brand identity</div></div>
+            <div class="cs-res"><div class="cs-res-n">&#10003;</div><div class="cs-res-l">SEO-optimized launch</div></div>
+            <div class="cs-res"><div class="cs-res-n">100%</div><div class="cs-res-l">Custom design</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="more-coming reveal">
   <div>
     <h2 class="mc-title">More projects <em>coming soon.</em></h2>
     <p class="mc-body">We're actively taking on new clients for Q2 2026. Want to see your project featured here?</p>
     <a href="contact.html" class="btn-primary"><span>Start a Project</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
   </div>
-  <div class="mc-placeholder"><div class="mc-placeholder-num">Q2</div><div class="mc-placeholder-label">Next Featured Project</div></div>
+  <div class="mc-placeholder"><div class="mc-placeholder-num">Q3</div><div class="mc-placeholder-label">Next Featured Project</div></div>
 </div>
 
 <footer>
@@ -259,8 +325,10 @@ document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
 document.querySelectorAll('.cs-tab').forEach(tab=>{
   tab.addEventListener('click',()=>{
-    document.querySelectorAll('.cs-tab').forEach(t=>t.classList.remove('active'));
-    document.querySelectorAll('.cs-panel').forEach(p=>p.classList.remove('active'));
+    // Only reset tabs in the same case study
+    const tabsWrap = tab.closest('.cs-tabs-wrap') || tab.parentElement.parentElement;
+    tabsWrap.querySelectorAll('.cs-tab').forEach(t=>t.classList.remove('active'));
+    tabsWrap.querySelectorAll('.cs-panel').forEach(p=>p.classList.remove('active'));
     tab.classList.add('active');
     const panel=document.getElementById('tab-'+tab.dataset.tab);
     if(panel)panel.classList.add('active');
