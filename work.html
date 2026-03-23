@@ -280,6 +280,22 @@ footer{padding:28px 48px;border-top:1px solid rgba(255,255,255,0.06);display:fle
   background: linear-gradient(to top, rgba(8,8,8,0.88) 0%, transparent 40%) !important;
   align-items: flex-end !important;
 }
+
+.gloryber-hero { position: relative; height: 400px; overflow: hidden; }
+.gloryber-overlay {
+  background: linear-gradient(to top, rgba(8,8,8,0.88) 0%, rgba(8,8,8,0.2) 40%, transparent 65%) !important;
+  align-items: flex-end !important;
+}
+.case-study:hover .gloryber-hero video { transform: scale(1.03); }
+
+
+.gloryber-hero { position: relative; height: 400px; overflow: hidden; }
+.gloryber-overlay {
+  background: linear-gradient(to top, rgba(8,8,8,0.88) 0%, rgba(8,8,8,0.15) 40%, transparent 65%) !important;
+  align-items: flex-end !important;
+}
+.case-study:hover .gloryber-hero video { transform: scale(1.03); }
+
 </style>
 </head>
 <body>
@@ -310,9 +326,11 @@ footer{padding:28px 48px;border-top:1px solid rgba(255,255,255,0.06);display:fle
 </div>
 <div class="work-sec">
   <div class="case-study reveal">
-    <div class="cs-hero">
-      <img src="images/gloryber.jpg" alt="GloryBer's Spanish Academy">
-      <div class="cs-overlay">
+    <div class="cs-hero gloryber-hero">
+      <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .8s">
+        <source src="images/gloryber-hero.mp4" type="video/mp4">
+      </video>
+      <div class="cs-overlay gloryber-overlay">
         <div><div class="cs-launched">&#10003; Live &amp; Launched</div><h3 class="cs-name">GloryBer's Spanish Academy</h3><p class="cs-meta">Alexandria, VA &bull; Est. 2021 &bull; Bilingual Daycare</p></div>
         <a href="https://gloryberspanishacademy.com" target="_blank" class="cs-btn">Visit Site &nearr;</a>
       </div>
